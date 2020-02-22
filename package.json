@@ -1,0 +1,63 @@
+{
+  "name": "@aicacia/cast-canvas-sender",
+  "version": "0.1.0",
+  "description": "cast canvas sender",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/aicacia/libs/ts-cast-canvas-sender.git"
+  },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "module": "./lib/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "ts-node node_modules/.bin/tape lib/**/*.test.{ts,tsx} | tap-spec",
+    "coverage": "nyc --reporter=lcov --require ts-node/register tape lib/**/*.test.{ts,tsx} | tap-spec; nyc report ---reporter=text",
+    "clean": "rm -rf ./src",
+    "formatTS": "prettier-tslint fix '**/*.{ts,tsx}'",
+    "formatJS": "prettier --write '**/*.{js,jsx,json}' --ignore-path .gitignore",
+    "format": "npm run formatTS && npm run formatJS",
+    "lint": "tslint -c tslint.json 'lib/**/*.{ts,tsx}' -e 'lib/**/*.test.*'",
+    "simple": "parcel examples/simple/index.html"
+  },
+  "keywords": [
+    "cast",
+    "canvas",
+    "sender"
+  ],
+  "author": "Nathan Faucett",
+  "license": "(MIT OR Apache-2.0)",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "@types/chromecast-caf-sender": "^1.0.3",
+    "@types/node": "^13.7.0",
+    "@types/tape": "^4.2.33",
+    "nyc": "^14.1.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "prettier-tslint": "^0.4.2",
+    "tap-nyc": "^1.0.3",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0",
+    "ts-node": "^8.5.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "@aicacia/core": "^0.1.3"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*"
+    ],
+    "exclude": [
+      "**/*.test.*"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ]
+  }
+}

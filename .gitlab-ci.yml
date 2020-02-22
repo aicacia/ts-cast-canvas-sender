@@ -1,0 +1,13 @@
+image: node:10
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  script:
+    - npm run lint
+    - npm run coverage

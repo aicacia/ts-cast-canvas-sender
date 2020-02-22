@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es3",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./src",
+    "strict": true,
+    "lib": ["esnext", "DOM"]
+  },
+  "include": ["lib", "examples"],
+  "exclude": ["**/*.test.*"]
+}
