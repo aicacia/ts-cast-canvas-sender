@@ -2,7 +2,7 @@ import { none, Option } from "@aicacia/core";
 import { EventEmitter } from "events";
 
 const NAMSPACE = "urn:x-cast:aicacia",
-  STUN_URL = "stun://api.p2p.aicacia:3478";
+  STUN_URL = "stun:stun.l.google.com:19302";
 
 export const events = new EventEmitter();
 
