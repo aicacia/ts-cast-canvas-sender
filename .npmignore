@@ -1,11 +1,8 @@
-node_modules
-coverage
-test
-npm-debug.log
+node_modules/
+*.log
 tsconfig.json
-.vscode
+.vscode/
 .editorconfig
 .gitignore
-dist
-.cache
-.nyc_output
+dist/
+.cache/

@@ -1,7 +1,5 @@
-node_modules
-coverage
-src
-npm-debug.log
-.cache
-dist
-.nyc_output
+node_modules/
+lib/
+*.log
+.cache/
+dist/
