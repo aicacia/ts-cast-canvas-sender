@@ -45,12 +45,12 @@ function onLoad() {
   mediaStream = (canvas as any).captureStream(60);
   video.srcObject = mediaStream;
 
-  // navigator.mediaDevices
-  //   .getUserMedia({ video: true, audio: true })
-  //   .then((stream) => {
-  //     mediaStream = stream;
-  //     video.srcObject = mediaStream;
-  //   });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: true })
+    .then((stream) => {
+      mediaStream = stream;
+      video.srcObject = mediaStream;
+    });
 
   onResize(window.innerWidth, window.innerHeight);
 
