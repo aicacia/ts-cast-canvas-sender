@@ -1,4 +1,1 @@
-# ts-canvascast
-
-```typescript
-```
+# ts-cast-canvas-sender

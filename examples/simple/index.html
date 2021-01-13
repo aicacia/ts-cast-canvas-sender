@@ -22,7 +22,8 @@
     <script
       type="application/javascript"
       charset="utf-8"
-      src="./index.ts"
+      defer
+      src="index.ts"
     ></script>
     <script
       type="application/javascript"
@@ -30,11 +31,11 @@
       src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"
     ></script>
   </head>
-  <body style="padding: 0; margin: 0;">
-    <div style="position: absolute; width: 32px; right: 8px; top: 8px;">
+  <body style="padding: 0; margin: 0">
+    <div style="position: absolute; width: 32px; right: 8px; top: 8px">
       <google-cast-launcher></google-cast-launcher>
     </div>
     <video id="video" autoplay playsinline></video>
-    <canvas id="canvas" />
+    <canvas id="canvas"></canvas>
   </body>
 </html>
